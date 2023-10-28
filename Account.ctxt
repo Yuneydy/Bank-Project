@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Account
+comment0.text=\r\n\ Account\ uses\ getter\ and\ setter\ methods\ to\ retrieve\ and\ reassign\ \r\n\ information\ for\ each\ unique\ account.\ Account\ allows\ the\ user\ to\ deposit\ \r\n\ and\ withdraw\ funds\ from\ the\ account,\ regardless\ of\ type.\ \ \r\n\r\n\ @author\ Kyra\ and\ Yuneydy\r\n\ @version\ 10/11/2023\r\n
+comment1.params=initialDeposit\ accountType
+comment1.target=Account(double,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Account\r\n\ \r\n\ @param\ initialDeposit,\ accountType,\ initial\ deposit\ for\ each\ account\ and\ account\ type\ (Savings\ or\ Checking)\r\n
+comment2.params=
+comment2.target=double\ getBalance()
+comment2.text=\r\n\ Getter\ to\ retrieve\ the\ current\ balance\ in\ the\ account.\r\n\ \r\n\ @return\ current\ balance\ of\ Account\r\n
+comment3.params=
+comment3.target=double\ getID()
+comment3.text=\r\n\ Getter\ to\ retrieve\ id\ of\ Account\ (it's\ specific\ accountNum).\r\n\ \r\n\ @return\ current\ id\ of\ the\ Account\r\n
+comment4.params=balance
+comment4.target=void\ setBalance(double)
+comment4.text=\r\n\ Setter\ to\ set\ balance\ for\ new\ Account.\r\n\ \r\n\ @param\ new\ balance\ to\ be\ set\ to\ the\ Account\r\n
+comment5.params=amt
+comment5.target=void\ deposit(double)
+comment5.text=\r\n\ Adds\ amount\ to\ current\ balance\ (Does\ not\ change\ depending\ on\ account).\r\n\ \r\n\ @param\ amt,\ amount\ of\ money\ deposited\ to\ account\r\n
+comment6.params=amount
+comment6.target=void\ withdraw(double)
+comment6.text=\r\n\ Subtracts\ the\ amount\ from\ the\ current\ balance.\r\n\ \r\n\ @param\ amount,\ amount\ of\ money\ withdrawned\ from\ account\r\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\r\n\ A\ string\ representation\ of\ an\ Account\ class.\r\n\ \r\n\ @return\ String\ representation\ of\ Account\ class\r\n
+numComments=8

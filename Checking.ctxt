@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Checking
+comment0.text=\r\n\ Checking\ allows\ a\ user\ to\ deposit\ and\ withdraw\ money\ from\ the\ account\ \r\n\ but\ if\ the\ balance\ falls\ below\ $100,\ an\ overdraft\ fee\ of\ $25\ is\ applied.\ \r\n\ The\ transaction\ is\ still\ completed\ even\ if\ the\ balance\ falls\ below\ $0.\r\n\r\n\ @author\ Yuneydy\ and\ Kyra\r\n\ @version\ 10/13/2023\r\n
+comment1.params=initialDeposit
+comment1.target=Checking(double)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Checking\r\n
+comment2.params=
+comment2.target=void\ chargeFee()
+comment2.text=\r\n\ Subtracts\ the\ overdraftFee\ from\ the\ current\ balance\ if\ \r\n\ the\ account\ balance\ is\ below\ the\ minimumBalance.\r\n
+comment3.params=amount
+comment3.target=void\ withdraw(double)
+comment3.text=\r\n\ Subtracts\ the\ amount\ from\ the\ current\ balance.\r\n\ \r\n\ @param\ amount,\ amount\ of\ money\ withdrawned\ from\ account\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

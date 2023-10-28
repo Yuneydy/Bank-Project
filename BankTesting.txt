@@ -1,0 +1,108 @@
+---------------Testing findAccount() with empty Bank------------
+In our Bank we currently have these accounts: 
+There are no accounts in this Bank. 
+
+
+TESTING BANK METHODS 
+
+---------------Testing addAccount() method: (Adding first Account)------------
+In our Bank we currently have these accounts: 
+*Savings Account Number: 0.0   Balance $100.0    Interest Rate: 0.05
+
+
+---------------Testing addAccount() method: (Adding second account)-----------
+In our Bank we currently have these accounts: 
+*Savings Account Number: 0.0   Balance $100.0    Interest Rate: 0.05
+*Checking Account Number: 1.0   Balance $200.0   Minimum Balance: 100.0    Overdraft Fee: 25.0
+
+
+---------------Testing addAccount() method: (Adding past maxAmount of Accounts)-----------
+Cannot add more accounts. 
+Bank is full.
+In our Bank we currently have these accounts: 
+*Savings Account Number: 0.0   Balance $100.0    Interest Rate: 0.05
+*Checking Account Number: 1.0   Balance $200.0   Minimum Balance: 100.0    Overdraft Fee: 25.0
+*Checking Account Number: 2.0   Balance $150.0   Minimum Balance: 100.0    Overdraft Fee: 25.0
+*Savings Account Number: 3.0   Balance $3000.0    Interest Rate: 0.05
+
+
+---------------Testing findAccount() method: (A KNOWN account: s1)-----------
+Account found:
+*Checking Account Number: 1.0   Balance $200.0   Minimum Balance: 100.0    Overdraft Fee: 25.0
+
+
+---------------Testing findAccount() method: (An UNKNOWN account)-----------
+This Account was not Found:
+null
+
+
+---------------Testing calculateTotalFunds() method with KyrasBank-----------
+Expected total funds: $3450 
+Actual total funds: $3450.0
+
+
+TESTING ACCOUNT METHODS 
+
+---------------Testing deposit() method on Account c2 -----------
+Starting Account c2 balance: $200.0
+Adding $123 deposit
+(Expected: $323) Actual balance: $323.0
+
+---------------Testing deposit() method on Account s4 (Not in Bank) -----------
+Starting Account s4 balance: $3000.0
+Adding $102 deposit...
+(Expected: $402) Actual balance: $3102.0
+
+---------------Testing withdraw() method on Savings Account s1 -----------
+Starting Account s1 balance: $100.0
+Subtracting $75 withdrawal...
+A withdraw of 75.0 is ordered. Transaction COMPLETE
+(Expected: $25) Actual balance: $25.0
+
+---------------Testing withdraw() method on Savings Account s1 -----------
+Starting Account s1 balance: $25.0
+Subtracting another $75 withdrawal...
+A withdraw of $75.0 is ordered. Transaction DENIED. 
+Insufficient Funds
+(Expected: $25) Actual balance: $25.0
+
+---------------Testing withdraw() method on Checking Account c3 (Uses chargeFee() in Checking class) -----------
+Starting Account c3 balance: $150.0
+Subtracting $90 withdrawal...
+A withdraw of $90.0 is ordered. Transaction COMPLETE
+Checking Account below Minimum Balance: Overdraft Fee has been charged 
+Current balance is now: $35.0
+(Expected: $60) Actual balance: $35.0
+
+---------------Testing withdraw() method on Checking Account c3 (Uses chargeFee() in Checking class) -----------
+Starting Account c3 balance: $35.0
+Subtracting another $90 withdrawal...
+A withdraw of $90.0 is ordered. Transaction COMPLETE
+Checking Account below Minimum Balance: Overdraft Fee has been charged 
+Current balance is now: $-80.0
+(Expected: $-80) Actual balance: $-80.0
+
+---------------Testing withdraw() method on Checking Account c5 (Uses chargeFee() in Checking class) -----------
+Starting Account c5 balance: $400.0
+Subtracting $90 withdrawal...
+A withdraw of $90.0 is ordered. Transaction COMPLETE
+Checking Account above Minimum Balance: Overdraft Fee has NOT been charged
+Current balance is: $310.0
+(Expected: $310) Actual balance: $310.0
+
+---------------Testing accrueInterest() method on Savings Account s4 -----------
+Starting Account s4 balance: $3102.0
+Accruing interest after 1 month...
+(Expected: $3102.13) Actual balance: $3102.12925
+
+---------------ENDING STATE OF BANK -----------
+In our Bank we currently have these accounts: 
+*Savings Account Number: 0.0   Balance $25.0    Interest Rate: 0.05
+*Checking Account Number: 1.0   Balance $323.0   Minimum Balance: 100.0    Overdraft Fee: 25.0
+*Checking Account Number: 2.0   Balance $-80.0   Minimum Balance: 100.0    Overdraft Fee: 25.0
+*Savings Account Number: 3.0   Balance $3102.12925    Interest Rate: 0.05
+
+
+---------------TOTAL FUNDS-----------
+Expected total funds: $3370.13 
+Actual total funds: $3370.12925

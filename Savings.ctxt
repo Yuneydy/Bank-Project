@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Savings
+comment0.text=\r\n\ Savings\ allows\ a\ user\ to\ deposit\ and\ withdraw\ money\ from\ the\ account.\ \r\n\ A\ withdrawal\ transaction\ will\ not\ be\ completed\ if\ the\ balance\ falls\ below\ $0.\ \r\n\ There\ must\ be\ sufficient\ funds\ in\ the\ account.\ There\ is\ an\ interest\ rate\ of\ \r\n\ 0.5%\ added\ every\ month.\ \r\n\r\n\ @author\ Yuneydy\ and\ Kyra\r\n\ @version\ 10/11/2023\r\n
+comment1.params=initialDeposit
+comment1.target=Savings(double)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Savings\r\n
+comment2.params=
+comment2.target=void\ accrueInterest()
+comment2.text=\r\n\ Adds\ interest\ with\ interestRate\ by\ 1\ month.\r\n
+comment3.params=amount
+comment3.target=void\ withdraw(double)
+comment3.text=\r\n\ Subtracts\ the\ amount\ from\ the\ current\ balance.\r\n\ \r\n\ @param\ amount,\ amount\ of\ money\ withdrawn\ from\ account\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
